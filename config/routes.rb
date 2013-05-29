@@ -1,5 +1,12 @@
 Eduraas::Application.routes.draw do
+  authenticated :user do
+    root :to => 'static_pages#home'
+  end
+  devise_for :users
+
   root to: 'static_pages#home'
+
+  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

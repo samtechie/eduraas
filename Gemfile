@@ -6,6 +6,11 @@ gem 'bcrypt-ruby','3.0.1'
 gem 'faker','1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6' 
+gem 'devise'
+gem 'cancan'
+gem "rolify", ">= 3.2.0"
+gem "simple_form", ">= 2.0.4"
+gem "figaro", ">= 0.5.0"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development, :test do
@@ -19,6 +24,9 @@ end
 
 group :development do
   gem 'annotate','2.5.0'
+  gem "quiet_assets", ">= 1.0.1"
+  gem "better_errors", ">= 0.2.0"
+  gem "binding_of_caller", ">= 0.6.8"
 
   
 end
@@ -43,6 +51,9 @@ group :test do
   gem 'rb-notifu', '0.0.4'
   gem 'win32console','1.3.2'
   gem 'wdm','0.0.3'
+  gem "database_cleaner", ">= 0.9.1"
+  gem "email_spec", ">= 1.4.0"
+  gem "launchy", ">= 2.1.2"
 end
 
 group :production do
