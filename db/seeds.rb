@@ -16,4 +16,10 @@ puts 'user: ' << user.name
 user.add_role :admin
 user2 = User.find_or_create_by_email :name => 'Second User', :email => 'user2@example.com', :password => 'changeme', :password_confirmation => 'changeme'
 puts 'user: ' << user2.name
-user2.add_role :VIP
+user2.add_role :DEO
+user3 = User.find_or_create_by_email :name => 'Third User', :email => 'user3@example.com', :password => 'changeme', :password_confirmation => 'changeme'
+puts 'user: ' << user3.name
+user3.add_role :Ministry
+user4 = User.find_or_create_by_email :name => 'Fourth User', :email => 'user4@example.com', :password => 'changeme', :password_confirmation => 'changeme'
+puts 'user: ' << user4.name
+user4.add_role :School
