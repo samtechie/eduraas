@@ -1,0 +1,30 @@
+<% @regions.each do |region| %>
+<div class="row">
+ <div class="region">
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= region.region_name %>
+       </h1>
+    </section>
+  </aside>
+</div>
+  <div class="span8">
+    <% if region.districts.any? %>
+      <h3>Districts (<%= region.districts.count %>)</h3>
+      
+         <%= form_for (:region) do |f| %>
+          <%= f.label :district %>
+          <%= f.collection_select :district, region.districts.order(:district_name),:id, :district_name, :prompt => "-- Select District --" %>
+          <%= f.label :county %>
+          <%= f.grouped_collection_select :county, region.districts.order(:district_name),:counties, :district_name ,:id, :county_name, :prompt => "-- Select County --" %>
+          <% end %>
+           
+    <% end %>
+  
+  </div>
+</div>
+<br>
+<% end%>
+<%= link_to "Add District", new_district_path %>
+<%= link_to "Graph", info_url%>

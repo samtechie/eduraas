@@ -106,3 +106,26 @@ footer {
     }
   }
 }
+
+/*region*/
+
+.region {
+  
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 2px solid $grayMediumLight;
+  color: $grayDarker;
+}
+
+.checkbox{
+  float: center;
+}
+
+signup_container{
+padding: 40px;
+margin-bottom: 30px;
+background-color: #eeeeee;
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+}

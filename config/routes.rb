@@ -1,4 +1,20 @@
 Eduraas::Application.routes.draw do
+  get "district/new"
+
+  get "district/edit"
+
+  get "region/new"
+
+  get "region/edit"
+
+
+
+  get "view_information/show"
+
+  match '/info',  to: 'view_information#index'
+
+  
+
   authenticated :user do
     root :to => 'static_pages#home'
   end
@@ -7,6 +23,8 @@ Eduraas::Application.routes.draw do
   root to: 'static_pages#home'
 
   resources :users
+  resources :regions
+  resources :districts
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

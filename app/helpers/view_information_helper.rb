@@ -1,0 +1,2 @@
+module ViewInformationHelper
+end

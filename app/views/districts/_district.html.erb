@@ -1,0 +1,5 @@
+ <%= link_to district.district_name, district %>
+  <% if current_user.admin? %>
+    | <%= link_to "delete", district, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+  <% end %>

@@ -1,0 +1,10 @@
+<div class="region">
+<%= form_for (@district) do |f| %>
+<%= f.label :region %>
+<%= collection_select :region,:region_id, Region.all, :id, :region_name, :prompt => "-- Select Region --" %>
+<%= f.label :district %>
+<%= f.text_field :district_name %>
+<%= f.submit "Add District", class: "btn btn-large btn-primary" %>
+
+<%end%>
+</div>
