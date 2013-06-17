@@ -1,0 +1,9 @@
+<h1><%=@subcounty.subcounty_name%></h1>
+<h2>Parishes</h2>
+<%@subcounty.parishes.each do |parish|%>
+<table>
+	<tr>
+	   <td><%=link_to parish.parish_name, parish%></td>
+	<tr>
+</table>
+<%end%>

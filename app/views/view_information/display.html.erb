@@ -1,0 +1,31 @@
+<div class="region">
+<table>
+    <tr> 
+        <th>Region</th>
+        <th>District/County</th>
+    </tr>
+    <% @regions.each do |region|%>
+    <tr>
+        <td><%=region.region_name%></td>
+        <td>
+            <table>
+            <% region.districts.each do |district| %>
+                <tr>
+                    <td><%= district.district_name %></td>
+                    <td>
+                        <table>
+                        <% district.counties.each do |county| %>
+                            <tr>
+                                <td><%= county.county_name %></td>
+                            </tr>
+                        <% end %>
+                        </table>
+                    </td>
+                </tr>
+            <% end %>
+            </table>
+        </td>
+    </tr>
+    <% end %>
+</table>
+</div>

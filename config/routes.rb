@@ -1,4 +1,30 @@
 Eduraas::Application.routes.draw do
+  get "schools/index"
+
+  get "schools/create"
+
+  get "schools/show"
+
+  get "parishes/index"
+
+  get "parishes/create"
+
+  get "parishes/show"
+
+  get "subcounties/index"
+
+  get "subcounties/show"
+
+  get "subcounties/create"
+
+  get "counties/index"
+
+  get "counties/show"
+
+  get "counties/create"
+
+  get "counties/edit"
+
   get "district/new"
 
   get "district/edit"
@@ -12,6 +38,7 @@ Eduraas::Application.routes.draw do
   get "view_information/show"
 
   match '/info',  to: 'view_information#index'
+  match '/data',  to: 'view_information#display'
 
   
 
@@ -25,6 +52,10 @@ Eduraas::Application.routes.draw do
   resources :users
   resources :regions
   resources :districts
+  resources :counties
+  resources :subcounties
+  resources :parishes
+  resources :schools
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

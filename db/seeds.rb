@@ -80,4 +80,26 @@ county19 = district8.counties.create(county_name: 'Vurra')
 county20 = district8.counties.create(county_name: 'Madi-Okollo')
 county21 = district8.counties.create(county_name: 'Ayivu')
 
+subcounty1 = county1.subcounties.create(subcounty_name: 'Kawempe North')
+
+parish1 = subcounty1.parishes.create(parish_name: 'Kanyanya')
+
+school1 = parish1.schools.create(school_name: 'Kanyanya P.S.')
+
+grade1 = school1.grades.create(grade_name: 'Primary 1',stream_number: 5, teacher_number: 4, desk_number: 20 )
+grade2 = school1.grades.create(grade_name: 'Primary 2',stream_number: 2,teacher_number: 3, desk_number: 15)
+grade3 = school1.grades.create(grade_name: 'Primary 3',stream_number: 2,teacher_number: 3,desk_number: 12)
+grade4 = school1.grades.create(grade_name: 'Primary 4',stream_number: 3,teacher_number: 5,desk_number: 14)
+grade5 = school1.grades.create(grade_name: 'Primary 5',stream_number: 4,teacher_number: 3,desk_number: 13)
+grade6 = school1.grades.create(grade_name: 'Primary 6',stream_number: 2,teacher_number: 4,desk_number: 10)
+grade7 = school1.grades.create(grade_name: 'Primary 7',stream_number: 4,teacher_number: 6,desk_number: 15)
+
+
+readingmaterials1 = grade1.readingmaterials.create(math: 20, english: 40, science:30, sst: 20)
+readingmaterials2 = grade2.readingmaterials.create(math: 10, english: 12, science:15, sst: 20)
+readingmaterials3 = grade3.readingmaterials.create(math: 12, english: 10, science:10, sst: 10)
+readingmaterials4 = grade4.readingmaterials.create(math: 16, english: 11, science:15, sst: 13)
+readingmaterials5 = grade5.readingmaterials.create(math: 13, english: 10, science:10, sst: 10)
+readingmaterials6 = grade6.readingmaterials.create(math: 16, english: 20, science:19, sst: 16)
+readingmaterials7 = grade7.readingmaterials.create(math: 20, english: 19, science:17, sst: 30)
 

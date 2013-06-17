@@ -1,0 +1,85 @@
+<h1><%=@school.school_name%></h1>
+<div>
+<div>
+
+<table class="tableau">
+ <thead>
+ <tr>
+	<th>Class</th>
+	<th>No of Streams</th>
+	<th>No of Teachers</th>
+	<th>No of Desks</th>
+
+ </tr>
+ </thead>
+ <tbody>
+ <%@school.grades.each do |grade|%>
+   <tr>
+		<td><%=grade.grade_name%></td>
+		<td><%=grade.stream_number%></td>
+		<td><%=grade.teacher_number%></td>
+		<td><%=grade.desk_number%></td>
+	</tr>
+  <%end%>
+  </tbody>
+</table>
+</div>
+
+<div>
+<table class="tableau">
+<thead>
+ <tr>
+ 	<th>Class</th>
+ 	<th>No of Math Books</th>
+ 	<th>No of English Books</th>
+ 	<th>No of Science Books</th>
+ 	<th>No of SST Books</th>
+ 	  
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+
+
+ <%@school.readingmaterials.each do |readingmaterial|%>
+        <td><%=readingmaterial.grade.grade_name%></td>
+   		<td><%=readingmaterial.math%></td>
+		<td><%=readingmaterial.english%></td>
+		<td><%=readingmaterial.science%></td>
+		<td><%=readingmaterial.sst%></td>
+	</tr>
+<%end%>
+</tbody>
+
+</table>
+</div>
+</div>
+<h3 class="center region"> Estimated School Facilitation Grant</h3>
+<%= content_tag :div, "", id: "sfg_table", data: {grades:@school}%>
+
+<table class="tableau">
+	<thead>
+	   <tr>
+	   	<th>Class</th>
+		<th>Total Amount for No of TextBooks</th>
+		<th>Total Amount No of Teachers</th>
+		<th>Total Amount No of Streams</th>
+		<th>Total Amount No of Desks</th>
+	   </tr>
+	</thead>
+<tbody>
+  <tr>
+  	<%@school.readingmaterials.each do |readingmaterial|%>
+  	<td><%=readingmaterial.grade.grade_name%></td>
+  	<td><%=(readingmaterial.math + readingmaterial.english + readingmaterial.english + readingmaterial.sst)*8000 %></td>
+  	<td><%=readingmaterial.grade.teacher_number*8000%></td>
+  	<td><%=readingmaterial.grade.stream_number*8000%></td>
+  	<td><%=readingmaterial.grade.desk_number*8000%></td>
+
+
+  </tr>
+  <%end%>
+</tbody>
+
+</table>
+<p><%=link_to "Printable Report(PDF)",school_path(@school, format: "pdf")%></p>

@@ -1,0 +1,23 @@
+<% @districts.each do |district| %>
+<div class="row">
+ <div class="region">
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= district.district_name %>
+       </h1>
+    </section>
+  </aside>
+</div>
+
+<div class="span8">
+	<h2> Counties </h2>
+	<%district.counties.each do |county|%>
+
+	 <ul>
+	 	<li><%=link_to county.county_name, county %></li>
+	 </ul>
+    <%end%>
+</div>
+</div>
+<%end%>

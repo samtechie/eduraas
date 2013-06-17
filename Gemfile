@@ -11,6 +11,7 @@ gem 'cancan'
 gem "rolify", ">= 3.2.0"
 gem "simple_form", ">= 2.0.4"
 gem "figaro", ">= 0.5.0"
+gem "roo"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development, :test do
@@ -20,6 +21,7 @@ group :development, :test do
   gem 'guard-spork','1.2.0'
   gem 'spork', '0.9.2'
   gem 'factory_girl_rails', '4.1.0'
+  gem 'prawn', '0.12.0'
 end
 
 group :development do
@@ -37,6 +39,7 @@ end
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby

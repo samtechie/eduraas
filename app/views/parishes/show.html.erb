@@ -1,0 +1,9 @@
+<h1><%=@parish.parish_name%></h1>
+<h2>Schools</h2>
+<%@parish.schools.each do |school|%>
+<table>
+	<tr>
+	   <td><%=link_to school.school_name, school%></td>
+	<tr>
+</table>
+<%end%>

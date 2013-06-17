@@ -1,0 +1,9 @@
+<h1><%=@county.county_name%></h1>
+<h2>Subcounties</h2>
+<%@county.subcounties.each do |subcounty|%>
+<table>
+	<tr>
+	   <td><%=link_to subcounty.subcounty_name, subcounty%></td>
+	<tr>
+</table>
+<%end%>
