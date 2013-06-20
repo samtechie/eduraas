@@ -103,3 +103,25 @@ readingmaterials5 = grade5.readingmaterials.create(math: 13, english: 10, scienc
 readingmaterials6 = grade6.readingmaterials.create(math: 16, english: 20, science:19, sst: 16)
 readingmaterials7 = grade7.readingmaterials.create(math: 20, english: 19, science:17, sst: 30)
 
+parish2 = subcounty1.parishes.create(parish_name: 'Kawempe I')
+
+school2 = parish2.schools.create(school_name: 'Kawempe COU P.S.')
+
+grade8 = school2.grades.create(grade_name: 'Primary 1',stream_number: 3, teacher_number: 5, desk_number: 21 )
+grade9 = school2.grades.create(grade_name: 'Primary 2',stream_number: 6,teacher_number: 4, desk_number: 15)
+grade10 = school2.grades.create(grade_name: 'Primary 3',stream_number: 2,teacher_number: 3,desk_number: 12)
+grade11 = school2.grades.create(grade_name: 'Primary 4',stream_number: 4,teacher_number: 5,desk_number: 14)
+grade12 = school2.grades.create(grade_name: 'Primary 5',stream_number: 4,teacher_number: 6,desk_number: 11)
+grade13 = school2.grades.create(grade_name: 'Primary 6',stream_number: 5,teacher_number: 4,desk_number: 13)
+grade14 = school2.grades.create(grade_name: 'Primary 7',stream_number: 6,teacher_number: 6,desk_number: 15)
+
+readingmaterials8 = grade8.readingmaterials.create(math: 23, english: 41, science:20, sst: 20)
+readingmaterials9 = grade9.readingmaterials.create(math: 11, english: 12, science:15, sst: 23)
+readingmaterials10 = grade10.readingmaterials.create(math: 12, english: 10, science:10, sst: 10)
+readingmaterials11 = grade11.readingmaterials.create(math: 12, english: 14, science:16, sst: 13)
+readingmaterials12 = grade12.readingmaterials.create(math: 13, english: 10, science:10, sst: 29)
+readingmaterials13 = grade13.readingmaterials.create(math: 16, english: 45, science:19, sst: 16)
+readingmaterials14 = grade14.readingmaterials.create(math: 20, english: 19, science:12, sst: 30)
+
+
+
