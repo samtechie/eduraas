@@ -15,6 +15,4 @@
 //= require bootstrap
 //= require raphael
 //= require morris
-//= require jquery.cascadingdropdown
-//= require dataTables/jquery.dataTables
 //= require_tree .

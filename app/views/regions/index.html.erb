@@ -18,7 +18,7 @@
           <%= f.collection_select :district, region.districts.order(:district_name),:id, :district_name, :prompt => "-- Select District --" %>
           <%= f.label :county %>
           <%= f.grouped_collection_select :county, region.districts.order(:district_name),:counties, :district_name ,:id, :county_name, :prompt => "-- Select County --" %>
-          <%= f.submit "Go", class: "btn btn-large btn-primary" %>
+          <%= f.submit "Generate", class: "btn btn-large btn-primary" %>
           <%= link_to " Districts", districts_path %>
           <% end %>
            

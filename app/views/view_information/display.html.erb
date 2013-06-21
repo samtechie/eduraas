@@ -1,31 +1,27 @@
-<div class="region">
-<table>
-    <tr> 
-        <th>Region</th>
-        <th>District/County</th>
-    </tr>
-    <% @regions.each do |region|%>
-    <tr>
-        <td><%=region.region_name%></td>
-        <td>
-            <table>
-            <% region.districts.each do |district| %>
-                <tr>
-                    <td><%= district.district_name %></td>
-                    <td>
-                        <table>
-                        <% district.counties.each do |county| %>
-                            <tr>
-                                <td><%= county.county_name %></td>
-                            </tr>
-                        <% end %>
-                        </table>
-                    </td>
-                </tr>
-            <% end %>
-            </table>
-        </td>
-    </tr>
+
+
+  <div class="span8">
+    
+      
+      
+         <%= form_for (:@region) do |f| %>
+         <%=f.label :region%>
+         <%=f.collection_select :@regions, @regions.order(:region_name),:id,:region_name, :prompt => "-- Select Region--"%>
+          <%= f.label :district %>
+          <%= f.collection_select :district, region.districts.order(:district_name),:id, :district_name, :prompt => "-- Select District --" %>
+          <%= f.label :county %>
+          <%= f.grouped_collection_select :county, region.districts.order(:district_name),:counties, :district_name ,:id, :county_name, :prompt => "-- Select County --" %>
+          <%= f.submit "Go", class: "btn btn-large btn-primary" %>
+          <%= link_to " Districts", districts_path %>
+          <% end %>
+           
     <% end %>
-</table>
+  
+  </div>
 </div>
+<br>
+<% end%>
+<%= link_to "Add District", new_district_path %>
+
+<%= link_to "Graph", info_url%>
+<%= link_to " Analyze data ", data_url%>

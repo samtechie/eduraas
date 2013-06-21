@@ -11,7 +11,7 @@ class ViewInformationController < ApplicationController
   
   def display
   	@regions = Region.all
-  	
+  	@region = Region.find(params[:id])
   end
   
 end
